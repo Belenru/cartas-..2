@@ -1,0 +1,158 @@
+Sistemas operativos 
+
+Software que comprende un conjunto de programas, es un intermediario entre la compu y el usuario. Maneja el hardware. 
+Funciona de intermediario a través de la interfaz.
+Es el soporte lógico que controla el funcionamiento del equipo físico.
+
+Recursos administrados por el SO 
+1. Gestionar la memoria de acceso aleatorio y ejecutar las aplicaciones. 
+2. Administrar CPU, por el algotirmo de programación
+3. Direccionar las entradas y salidas de datos a través de drives x medio de los perisféricos 
+4. Administrar la info para el buen funcionamiento de la PC
+5. Dirigir las autorizaciones de uso para el usuario 
+6. Administrar archivos  
+
+Existen varios tipos de SO que varía según el hardware y la función de cada dispositivo. 
+Se clasifican según: 
+
+1.Usuario: multiusuario (servidores)/ permite que varios usuarios ejecuten simultáneamente sus programas.
+	   monousuario / sola% permite ejecutar los programas de un usuario a la vez
+2. Gestión de tareas: multitarea /  permirte realizar varias tareas al mismo tiempo
+		      monotarea / realiza SOLO una tarea a la vez sin que se pueda interrumpir. SO primitivo, ej: DOS
+3. Gestión de recursos: centralizado 
+			distribuido 
+
+4.Estructura interna: monolítica/ construida por un solo programa (rutinas entrelazadas para la comunicación entre ellas). Están hechos a medida, son muy rápidos pero inflexibles para soportar diferentes tipos de aplicaciones. 
+		      máquina virtual / separan 2 conceptos unidos en el resto de SO: multiprogramación y máquina extendida. Su objetivo es integrar distintos SO dado la sensación de ver varias máquinas diferentes. 
+		      jerárquica / hechos para una mayor organización del software del SO, una parte contiene subpartes organizado por niveles. Subdivideen capas o anillos, perfecta% definidos y con una interfaz clara con respecto al resto de los recursos.
+		      cliente-servidor / sirve para todo tipo de aplicaciones, es de propósito general y cumple la misma función de los SO convencionales. La idea es mantener la visión que tiene un usuario de una compu personal, pero la red permite compartir el espacio del disco o la impresora con el fin de economizar recursos. 
+ 
+
+-Arquitectura cliente-servidor: 
+
+Su objetivo: procesar la info de modo distribuido, logrando estar dispersos en distintos lugares y acceder a recursos compartidos 
+Además de la transparencia y la independencia del hardware y software, debe tener como característica: 
+1.Utilizar protocolos asimétricos (el servidor se limita a escuchar en esera de que un cliente inicie una solicitud) 
+2. Acceso es transparente, multiplataforma y multiarquitectura
+3. Se facilitará la escalabilidad, para añadir fácilmente nuevos clientes a la infraestructura -escalabilidad horizontal- 
+                                   aumentar la potencia del servidor o servidores, aumentando su n° o capacidad de cálculo -escalabilidad vertical-	
+
+En los servidores también tienen SO (multiusuarios: varios usuarios están conectados al mismo tiempo trabajando sobre el mismo núcleo) hereados del SO UNIX por ej: red hat - windows server. 
+
+Servidor: realiza la response. Ordenador con prestaciones elevadas. Es un proceso que ofrece recursos y ss a los clientes que lo solicitan (back end). 
+	Según su tipo tendremos un tipo de arquitectura cliente-servidor diferente. 
+	Los programas y datos se encuentran centralizados facilitando la integridad y mantenimiento. 
+
+Middleware: es la parte del SO que transporta mensajes entre el cliente y el servidor y facilita la interconexión de sistemas heterogéneos sin utilizar tecnologías propietarias (propietary software), por lo cual se ejecuta en ambos lados de la estructura. 
+Permite independizar a los clientes y servidores. Ofrece control sobre el negocio ya que permite obtener info desde diferentes origenes y ofrecerlas de manera conjunta. 
+Además, los sistemas están debilmente acoplados ya que interactuan mediante el envio de mensajes. 
+1.DBMS: sistema de admin. de base de datos que permiten crear, recuperar, actualizar y administrar datos.
+2.API: interfaz de programación de aplicaciones que brindan un conjunto de subrutinas, funciones y procedimientos para ser utilizados en otro software.
+Por el middleware pasan la request y response 
+Cliente: hace la petición, front end (computadora) que solicita los ss del servidor a través de una petición del usuario. Un proceso cliente se encarga de interactuar con el usuario, por lo que estraá construido con alguna herramienta que permita implementar interfaces gráficas (GUI)
+
+Data center: varios servidores con protección de calor (t°), energía ininterrumpida, seguridad de acceso. 
+Nos permiten distribuir nuestros servicios en varios servidores. 
+Windows y Linuz SO especiales para servidores.
+
+SO según licencia: 
+
+Oper sorce: (a voluntad del usuario) permite modificar, usar y adaptar un sistema op. ej: ubuntu 
+
+Propietary software: (limitaciones del propietario) no permiten modificaciones, como windows. 
+
+
+-Características fundamentales de un SO para servidores: 
+1. Soporte de red: indispensable un soporte completo para brindar conectividad. 
+2. Amplia compatibilidad con el hardware: aprovechamiento pleno de las caract. del servidor es que el SO aproveche al máximo las caracteristicas tecnicas del hardware. SO actualizados con soporte importante de controladores. 
+3. Seguridad: No solo actualizado con parches/actualizaciones, además con políticas estrictas de acceso para prevenir accesos no autorizados o ataques. Reforzado con firewalls (software o hardware) y antivirus. Más resplado de la info (herramientas del SO o instalando software externo)
+4. Tolerancia a fallos: dispositivos físicos de protección. Puede ser una granja de servidores interconectados que operen como una gran unidad de proceso, así, ante la posible caída de uno otro tome su rol y responsabilidad. 
+
+
+SO para servidores no es el mismo que para el uso "común"
+1. Manejo diferente de hardware: tienen distintos propósitos. Los SO de estaciones de trabajo no pueden aprovechar todo el hardware disponible (windows 10 64-bit / RAM 6TB -- windows server 2019 / RAM 24TB) 
+2. Características soportadas: Hay funcionalidades que un SO de trabajo no brinda ya que su versión kernel (encargado de mediar procesos ente usuario y hardware) están limitadas o deshabilitadas.
+3. Soporte: SO de trabajo su soporte/cobertura es para uso específico. Podemos desplegas una arquitectura de servidor web pero no tendremos soporte técnico de parte del fabricante/desarollador quien nos indicará que para ese propósito está la versión "server" del producto. 
+
+
+SO para servidores web : 
+
+1. (25%) UNIX: 	GNU LINUX 
+	-Basado en UNIX, kernel se conoce como LINUX, emplean multiples componentes y herramientas del proyecto GNU, como un ambiente de escritorio gráfico, editor de imagenes, biblioteca para lenguajes de programación, compiladores, entre otros.
+	-286 es el n° actual de distribuciones
+	-Software libre 
+	-1.34% del mercado usa LINUX 
+	-97% de las pc más rápidas del mundo lo utilizan 
+	Pros: costo, seguridad, estabilidad.
+	Contras: complejidad
+
+		FreeBSD 
+
+		macOsServer: 
+	-Es el SO más antiguo, con interfaz gráfica desde el inicio
+	-El segundo más usado a nivel mundial 
+	-Basado en UNIX
+	-Solo el personal apple puede acceder al código fuente 
+	-Sincroniza facilemte con dispositivos apple.
+	Pros: estabilidad, seguridad, diseño 
+	Contras:costo, compatibilidad, no diseñado para gaming.
+
+2. (75%) WINDOWS: version desde 2003 a 2019
+	-Es el SO más utilizado en el mundo, posee el 88.14% del mercado	
+	-Tiene uno de los mejores antivirus (windows defender)
+	-Ideal para gaming 
+	Pros: integración (compatibilidad), soporte, facilidad de uso 
+	Contras: seguridad, costo, tamaño 
+
+Serivios que ofrecen los SO 
+
+Más utilizados: 	
+	ss publicacion web: 
+		despacha el contenido de un sitio web al usuario. 
+		El proceso es: comienza en el navegador web, al escribir la dirección del sitio web el sistema hace una busqueda DNS para encontrar el servidor donde está alojado. Una vez encontrado el navegador le pide el contenido al sitio web, el webserver procesa el pedido y envía el contenido al navegador visualizando el sitio en nuestra pantalla. 
+		Los más utilizados:
+			1. APACHE (codigo abierto utilizado x LINUX) / multiplataforma
+			2.Internet information services IIS (nativo de windows, forma parte de windows server) / solo windows 
+			3.Nginx (código abierto, orientado al alto rendimiento) / multiplataforma 
+			4.LiteSpeed (propietario, bien integrado a tecnologias como Cpanel, preferido de servidores cloud) / Linux
+
+	ss base de datos:
+		Tambien conocido como database server o RDBMS (relational database management system), en caso de bases de datos relacionales, es un tipo de SO de servidor que permiten la organizacion de la info mediante el uso de tablas, índices y registros. 
+		En la actualidad se hace cada vez más extendido el uso de base de datos no relacionales, conocidas como No-SQL 
+		La funcion funamental es proveer de info a otras aplicaciones web o equipos/hosts. 
+		En las diferentes bases de datos mediante usuario, contraseña y host, se le permite dependiendo del nivel de privilegios que posea, seleccionar, actualizar y borrar datos.
+		Existen: 
+			1.MySQL (lider indiscutido para datos en desarrollo web y aplicaciones, utilizan lenguajes como PHP, Ruby o Python) / multiplataforma, del tipo relacional 
+			2.PostgreSQL (open source orientado a objetos bajo la licencia PostgreSQL, ofrece robustez y velocidad a la hora e administrar datos) / multiplataforma, del tipo relacional 
+			3.MicrosoftSQLserver (Muy popular entre usuarios windows server, compatibilidad nativa con lenguaje prog. ASP/ASP.NET) / multiplataforma, del tipo relacional 
+			4.MongoDB (software libre, a diferencia de los demás no guarda los datos en tablas, sino que en estructuras BSON (parecidas a JSON) dinamicas, hace su acceso rápido y fácil) / multiplataforma, del tipo no relacional 
+
+	ss correo eletronico: 
+		Encargado de enviar y recibir msjs de correo electrónico entre hosts, usuarios o servidores. 
+		Entre sus funciones: procesado de mensajes, filtrado, almacenamiento, envio, recepcion y reenvio de correos.
+		Es una de las aplicaciones mas populares en usar el protocolo TCP/IP, permite en cuestion de segundos comunicarnos con cualquier persona en otra parte del mundo. 
+
+		Consta de 2 componentes fundamentales: 
+			1. MTA (mail transports agent): agente de transferencia de correo, software encargado de transferir el email de un host a otro.
+			Más populares: QMAIL, EXIM, POSTFIX, MICROSOFT EXCHANGE SERVER, COURIER, CYRUS
+
+			2. MDA (mail delivery agent): recibe el correo de un MTA y lo lleva al inbox de la casilla de correo, que previamente se comunicó con el servidor POP o IMAP. 
+			Más extendidos en su uso: DOVECOT, PROCMAIL, MAILDROP.
+	ss de archivos: File server, es un servidor central de una red de ordenadores, que pone a disposicion del cliente conectado un conjunto de archivos o parte del mismo. Proporciona a los usuarios un lugar de almacenamiento centralizado para los archivos en sus propios soportes de datos, disponible para todos los clientes autorizados.
+			Establece directrices estrictas para determinar qué usuarios tienen derechos de accesos y a qué datos. 
+			Cada SO tiene su propio ss de comparticion de archivos, por lo que la eleccion muchas veces depende de las plataformas de clientes.
+			Más utilizados: CIFS/Sama (utilizado en linux)
+					NTFS Share (nativo de los sistemas Microsoft) 
+					NFS (desarrollado por Sun y originario de los sist UNIX) 
+
+	ss de red: Es muy extendido el uso de los propios ss del SO con el propósito de satisfacer necesidades de ruteo, firewall o proxy. 
+			Este tipo de implementaciones se aplica más tomando como base de sist Linux, implememtando sobre ellos una serie de paquetes/softwares que dan como resultado routers, firewalls o proxies. 
+			Las soluciones más utilizadas son: 
+			1. PFSense: stack basado en BSD, cumple con multiples funciones como: router, VPN, firewall.
+			2. OPNSense: derivado del primero y de monowall, muy presente en el mercado de los routers corporativos. 
+			3. DD-WRT: basado en linux, extendido su uso en routers hogareños, destaca por los pocos requerimientos para funcionar. 
+
+	ss dominio 
+
+
+

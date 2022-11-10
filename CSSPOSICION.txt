@@ -1,0 +1,79 @@
+POSITION: 
+
+Posicionamiento sticky: EJ:
+
+CSS /  ."SELECTOR CLASS" { POSITION: STICKY; TOP: 15PX} 
+
+*Propiedades: se puede utilizar: top, left, right, bottom. 
+
+El posicionamiento nos permite TRASLADAR un elemento desde su posición original a una nueva y también superponer elementos. 
+Puntos de referencia: TOP, RIGHT, BOTTOM, LEFT. 
+como referencia tomamos un costado, si en numero es positivo lo "empujamos", negativo lo "tiraremos". 
+
+-Posicionamiento relativo: toma de referencia sus propios bordes. Traslada un elemento desde su posicion original a una nueva.
+El espacio que ocupaba la caja originalmente seguirá ocupado, los elementos que esten a su lado no se verán afectados por el traslado. 
+
+ej: (se moverá hacia la derecha 100px y abajo 50px)
+
+CSS /  .caja1 { 
+		position: relative; 
+		left: 100px;
+		top: 50px;
+		} 
+*Se utiliza para desplazar un elemento sin modificar el flujo original de sus pares. 
+
+-Posicionamiento absoluto: traslada un elemento tomando de referencia los costados del body
+Puntos de referencia: costados del body, el espacio original quedará vacio al mover el elemento. 
+
+ej: el elemento estando en el borde izquierdo de body se moverá a 100px del lado derecho del body y a 50px del borde de abajo del body. 
+
+CSS / .caja2 { 
+		position: absolute;
+		right: 100px;
+		bottom. 50px;
+		} 
+
+-Position relative + position absolute: 
+
+Si nuestras cajas "hijas" están dentro de otra caja "padre", el punto de referencia seguirá siendo el body A MENOS que hagamos RELATIVA la posición de su "padre".
+
+ej: cajas hijas dentro de una caja padre, se moverá a 100px del borde derecho de la caja padre y a 50px del borde bajo del mismo.
+
+CSS / div {position: relative} 
+
+     .caja2 { 
+	position: absolute;
+	right: 100px;
+	top: 50px;
+		} 
+
+Se utiliza para sacar un elemento del flujo normal y posicionarlo en un punto fijo con respecto a su conetendor o body. 
+
+-Posicionamiento fijo: movemos un elemento tomando como referencia los margenes del navegador 
+Sin importar si hacemos scroll en la pagina, el elemento siempre se mantendrá fijo con respecto a la ventana del navegador. 
+
+ej: el elemento se mantendrá a 50px del borde derecho del navegador y a 50px del borde bajo del mismo. 
+
+CSS / .botonFucsia { 
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		}	
+
+*Z-INDEX : mueve elementos hacia adelante o atras. a mayor valor se mostrará más adelante que el resto: 
+
+ej: 
+
+CSS / .caja-1 {...}
+	.caja-2 {...}
+		position: relative; 
+		z-inde:10; 
+		 } 
+La caja n° 2 se posicionará delante del resto, que por defecto tiene valor z-index de 0. 
+
+
+
+
+
+
+
