@@ -8,9 +8,9 @@ section {
     padding-top: 10px;
     padding-left: 27px;
     padding-bottom: 10px;
-    font-style: normal;
-    line-height: 18px;
-    height: 38px;
+    font-style: ;
+    line-height: 28px;
+    height: 28px;
     left: 0;
     top: 0;
     margin: 0;
@@ -24,6 +24,82 @@ h1 {
     box-sizing: border-box;        
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
     margin-top: 0;
+    height: 101px;
 
 
 }
+
+/*    diseño cajas   */ 
+
+.cajacorazon1 {
+
+    position:absolute;
+    left: 42px;
+    top: 320px;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+
+.cajafondo1 {
+    position: absolute;
+    top: 293px;
+    left: 32px;
+    width: 300px;
+    height: 193px;
+    box-sizing: content-box;
+
+
+}
+
+.cajaperfil1 {
+    position: absolute;
+    bottom: 70px;
+    left: 120px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 90px ;
+    
+
+
+}
+
+nav {
+    
+    height: 529px;
+    width: 300px;
+    box-sizing: content-box;
+    display: inline-block;
+
+}
+
+ /*  diseño titulos cartas  */ 
+ h2 {
+    position: absolute;
+    text-align: center;
+    font-family: roboto;
+    font-size: 30px;
+    font-weight: 400px;
+    bottom: rerd0px;
+    left: 120px; 
+
+    
+    
+
+  }
+
+  /* diseño descripcion */  
+
+  p {
+    position: absolute;
+    padding: 311px, 16px, 104px;
+    font-size: 16px;
+    font-family: roboto;
+    text-align: center; 
+    bottom: -120px; 
+    box-sizing: content-box;
+    width: 267px;
+       
+  }
+
+
+  body { min-height: 100vh;} 
